@@ -1,0 +1,121 @@
+------------------------------
+
+
+Question #### printing sum of elements in an array
+
+
+function arrSum(arr):
+	
+	SUM = 0
+
+	FOR element in arr
+		add element to the sum
+		sum = sum + element
+
+	RETURN SUM
+
+
+call: arrSum(arr)
+
+
+
+------------------------------
+
+
+
+Question #### Calculate max and min for 
+
+function minAndMax(arr):
+	
+	sort the arr
+
+	store the sum of first 4 elements in MIN
+
+	store the sum of Last 4 elements in MAX
+
+	RETURN MIN, MAX
+
+call: minAndMax(arr)
+------------------------------
+
+#### circus problem
+
+let's say the kangaroos meet at point d
+
+x1 + d*v1 = x2 + d*v2
+
+x1 - x2 = d(v2 - v1)
+
+d = (v2-v1)/ (x1-x2)
+
+so if (v2-v1) % (x1-x2) == 0:
+
+then kangaroos will meet, else they won't
+
+
+function meetingPoint(x1,v1,x2,v2):
+	
+	if (((v2-v1) % (x1-x2) == 0)):
+		return True
+	else:
+		return False
+
+call: meetingPoint(x1,v1,x2,v2)
+
+------------------------------
+
+#### basketball record
+
+
+
+def recordCalculator(scores):
+
+	#score of the first game played
+	max_score = min_score = scores[0]
+	
+	#initialize max_record and min_record = 0
+	max_record = min_record = 0
+
+
+	#iterate through each score from season after the first one
+
+	for i in range(1,len(scores)-1):
+
+		# increment the record for max score if this season's score is more than the max_score
+		if scores[i] > max_score:
+			max_record += 1
+			max_score = scores[i]
+		elif scores[i] < min_score:
+		#increment the min score record if this season's score is less than min score
+			min_record += 1
+			min_score = scores[i]
+
+
+		return min_record, max_record
+
+------------------------------
+
+
+Leaderboard
+
+
+
+function leaderboard(ranked, new_scores):
+	
+	APPEND the new scores into the existing score
+	ranked.extend(new_scores)
+
+	SORT the ranked array in reverse order
+
+	Remove the duplicate scores
+
+	FOR score in new_score:
+		APPEND the index of the rank in the ANSWER array
+
+	RETURN ANSWER array
+
+
+call: leaderboard(ranked, new_scores)
+
+
+------------------------------
