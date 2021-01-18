@@ -23,7 +23,7 @@ call: arrSum(arr)
 
 
 
-Question #### Calculate max and min for 
+Question #### Calculate max sum and min sum for an array with 5 elements 
 
 function minAndMax(arr):
 	
@@ -96,7 +96,7 @@ def recordCalculator(scores):
 ------------------------------
 
 
-Leaderboard
+#### Leaderboard
 
 
 
@@ -111,6 +111,7 @@ function leaderboard(ranked, new_scores):
 
 	FOR score in new_score:
 		APPEND the index of the rank in the ANSWER array
+	ENDFOR
 
 	RETURN ANSWER array
 
@@ -119,3 +120,40 @@ call: leaderboard(ranked, new_scores)
 
 
 ------------------------------
+
+#### pattern matching
+
+function patternMatch(grid, pattern):
+	
+	INITIALISE A COUNTER = 0
+
+
+	FOR grid_line in grid:
+
+		- WITH A SLIDING WINDOW OF THE LENGTH OF PATTERN_LINE[COUNTER], FIND WHETHER GRID_LINE WINDOW MATCHES WITH PATTERN_LINE[COUNTER].
+		- IF PATTERN_LINE MATCHES GRID_LINE WINDOW
+			- INCREMENT COUNTER
+			- IF COUNTER == LENGHT(PATTERN):
+				- RETURN "YES"
+			- MOVE FOR NEXT GRID_LINE AND COMPARE TO THE NEXT PATTERN_LINE = PATTERN[COUNTER] STARTING FROM POSITION WHERE THE LAST MATCH WAS FOUND
+
+		- IF PATTERN_LINE != GRID_LINE:
+			- RESET THE COUNTER TO 0
+			- CONTINUE FOR NEXT GRID_LINE
+
+	ENDFOR
+
+	RETURN "NO"
+
+
+call: patternMatch(grid, pattern)
+
+------------------------------
+
+
+#### MAGIC SQUARE
+
+
+
+
+
